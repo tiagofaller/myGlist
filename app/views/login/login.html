@@ -1,0 +1,38 @@
+<!--<div class="mgl_login">
+    <div class="mgl_logo">
+        <img src="ui/img/logo.svg" alt="" />
+    </div>
+    <button id="facebook_login">Entrar com o facebook</button>
+</div>
+<script type="text/javascript">
+    window.fbAsyncInit = function() {
+        //Initiallize the facebook using the facebook javascript sdk
+        FB.init({
+            appId: '{{ @app_id }}',
+            cookie: true, // enable cookies to allow the server to access the session
+            status: true, // check login status
+            xfbml: true, // parse XFBML
+            oauth: true //enable Oauth
+        });
+    };
+    //Read the baseurl from the config.php file
+    (function(d) {
+        var js, id = 'facebook-jssdk', ref = d.getElementsByTagName('script')[0];
+        if (d.getElementById(id)) {
+            return;
+        }
+        js = d.createElement('script');
+        js.id = id;
+        js.async = true;
+        js.src = "//connect.facebook.net/en_US/all.js";
+        ref.parentNode.insertBefore(js, ref);
+    }(document));
+    //Onclick for fb login
+    $('#facebook_login').click(function(e) {
+        FB.login(function(response) {
+            if (response.authResponse) {
+                parent.location = 'http://neomode.com.br/myGlist/login'; //redirect uri after closing the facebook popup
+            }
+        }, {scope: 'basic_info, email,publish_stream,user_birthday,user_location,user_hometown,user_events,friends_events, user_likes, friends_likes,user_interests, friends_interests,user_checkins,friends_checkins'}); //permissions for facebook
+    });
+</script>-->
